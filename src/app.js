@@ -24,8 +24,8 @@ function game() {
   rl.question('Type your digits: ', (yourDigits) => {
     const error = checkIsValidUserInput(yourDigits);
 
-    if (error) {
-      console.log(error);
+    if (!error) {
+      console.log('Inputed value is not valid');
 
       return game();
     }
